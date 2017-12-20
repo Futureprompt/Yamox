@@ -1,0 +1,33 @@
+ :> This is a comment.
+    It can be multiple lines long.
+    In Yamox, there is no single line comment. <:
+
+:> Printing "Hello World": <:
+o "Hello World";
+
+:> Taking a string input: <:
+Name = l "What is your name?";
+:> Taking an unsigned integer input: <:
+Age = l ("What is your age?", ui);
+
+:> All Yamox variables have to start with an uppercase letter (I may change this.) <:
+
+:> If statements: <:
+i Age < 13 {
+  o "You are a child.";
+}
+ie Age < 18 {
+  o "You are a teenager.";
+}
+iee {
+  o "You are an adult";
+}
+
+:> While loops: ( ' inverts a boolean. Yamox has no != ) <:
+o "Let's go back in time!";
+w (Age == 0)' {
+  Age -= 1;
+  o "Now you are %d years old." % Age;
+}
+
+:> In Yamox, indentation and newlines don't change the way the program works. <:
